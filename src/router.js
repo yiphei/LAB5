@@ -8,17 +8,17 @@ router.get('/', (req, res) => {
   res.json({ message: 'welcome to our blog api!' });
 });
 
-///your routes will go here
+// /your routes will go here
 
 
 router.route('/posts')
-.post()
-.get()
+  .post(Posts.createPost)
+  .get(Posts.getPosts);
 
 router.route('/posts/:id')
-.get()
-.put()
-.delete()
+  .get(Posts.getPost)
+  .put(Posts.updatePost)
+  .delete(Posts.deletePost);
 
 
 export default router;

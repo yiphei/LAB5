@@ -4,6 +4,13 @@ import cors from 'cors';
 import path from 'path';
 import morgan from 'morgan';
 import apiRouter from './router';
+import mongoose from 'mongoose';
+
+// DB Setup
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/blog';
+mongoose.connect(mongoURI);
+// set mongoose promises to es6 default
+mongoose.Promise = global.Promise;
 
 
 // initialize
@@ -29,7 +36,7 @@ app.set('views', path.join(__dirname, '../src/views'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//FROM THE LAB INSTRUCTIONS
+// FROM THE LAB INSTRUCTIONS
 app.use('/api', apiRouter);
 
 
