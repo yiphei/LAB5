@@ -40,8 +40,8 @@ export const deletePost = (req, res) => {
     });
 };
 export const updatePost = (req, res) => {
-  Post.findByIdAndUpdate(req.params.id, res.body).then((result) => {
-    res.json({ message: 'Post updated!' });
+  Post.findByIdAndUpdate(req.params.id, req.body).then((result) => {
+    res.json(result);
   })
     .catch((error) => {
       res.status(500).json({ error });
