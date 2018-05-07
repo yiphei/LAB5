@@ -40,7 +40,7 @@ export const deletePost = (req, res) => {
     });
 };
 export const updatePost = (req, res) => {
-  Post.update({ _id: req.params.id }, res.body).then((result) => {
+  Post.findByIdAndUpdate(req.params.id, res.body).then((result) => {
     res.json({ message: 'Post updated!' });
   })
     .catch((error) => {
