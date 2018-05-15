@@ -1,9 +1,7 @@
-# starter express app template
+# Yifei Yan
+# CS52
+# Lab5 Part 2
 
-* node with babel
-* expressjs
-* airbnb eslint rules
-
-Procfile set up to run on [heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app)
+Set up the authentication on the server side. Have a user model that stores username, salt+hashed password, and name. Everything works according to the lab instructions. NOthing is missing
 
 
