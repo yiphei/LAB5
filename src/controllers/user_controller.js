@@ -1,10 +1,8 @@
 import User from '../models/user_model';
-
 import jwt from 'jwt-simple';
 import dotenv from 'dotenv';
 
 dotenv.config({ silent: true });
-
 
 // encodes a new token for a user object
 function tokenForUser(user) {
@@ -20,6 +18,7 @@ export const signin = (req, res, next) => {
 export const signup = (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
+  const username = req.body.username;
 
   if (!email || !password) {
     return res.status(422).send('You must provide email and password');
@@ -32,7 +31,7 @@ export const signup = (req, res, next) => {
   // User.findOne({ 'email': email }).then((result) => {
   User.findOne({ email }).then((result) => {
     if (!result) {
-      const user = new User({ email, password });
+      const user = new User({ username, email, password });
 
       return user.save();
     } else {

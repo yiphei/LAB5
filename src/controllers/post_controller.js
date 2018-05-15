@@ -7,6 +7,9 @@ export const createPost = (req, res) => {
   post.content = req.body.content;
   post.cover_url = req.body.cover_url;
   post.author = req.user;
+  post.username = req.user.username;
+  console.log('in the server');
+  console.log(req.user.username);
 
   post.save()
     .then((result) => {
