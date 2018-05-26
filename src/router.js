@@ -2,6 +2,7 @@ import { Router } from 'express';
 import * as Posts from './controllers/post_controller';
 import * as UserController from './controllers/user_controller';
 import { requireAuth, requireSignin } from './services/passport';
+import signS3 from './services/s3';
 
 
 const router = Router();
@@ -11,6 +12,7 @@ router.get('/', (req, res) => {
 });
 
 // /your routes will go here
+router.get('/sign-s3', signS3);
 
 
 router.route('/posts')

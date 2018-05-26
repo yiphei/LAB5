@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import apiRouter from './router';
 import mongoose from 'mongoose';
 
+
 // DB Setup
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/blog';
 mongoose.connect(mongoURI);
