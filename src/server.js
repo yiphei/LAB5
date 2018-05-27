@@ -5,6 +5,9 @@ import path from 'path';
 import morgan from 'morgan';
 import apiRouter from './router';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+
+dotenv.config({ silent: true });
 
 
 // DB Setup

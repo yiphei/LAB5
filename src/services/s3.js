@@ -1,7 +1,10 @@
 import aws from 'aws-sdk';
+import dotenv from 'dotenv';
 
+dotenv.config({ silent: true });
 
 const signS3 = (req, res) => {
+  console.log('INSIDE SIGNS3');
   const s3 = new aws.S3({ signatureVersion: 'v4', region: 'us-east-2' });
   const fileName = req.query['file-name'];
   const fileType = req.query['file-type'];
