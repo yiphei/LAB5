@@ -23,4 +23,5 @@ const signS3 = (req, res) => {
   });
 };
 
+
 export default signS3;
