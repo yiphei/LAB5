@@ -7,13 +7,18 @@ Notepad is a web-based notepad application. You can create a note by typing the 
 
 ### API
 
-Set up the authentication on the server side. Have a user model that stores username, salt+hashed password, and name. Everything works according to the lab instructions. NOthing is missing
+- built an express and mongodb CRUD api server for our react+redux blog frontend
+
+- a pure api server, returning only JSON format data to our Lab4 frontend.
+
+- implemented authentication by creating a /signin, /signup, and /signout routes and add a way to restrict access to certain routes based on authentication
+
+- user model that stores username, salt+hashed password, and name.
 
 
-Link: notedapp.surge.sh
+Client link: notedapp.surge.sh
 
-
-https://lab4cs52.herokuapp.com
+Api link: https://lab4cs52.herokuapp.com
 
 
 
