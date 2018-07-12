@@ -5,3 +5,12 @@
 Set up the authentication on the server side. Have a user model that stores username, salt+hashed password, and name. Everything works according to the lab instructions. NOthing is missing
 
 
+
+notedapp.surge.sh
+
+
+https://lab4cs52.herokuapp.com
+
+
+
+
