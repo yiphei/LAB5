@@ -16,9 +16,10 @@ Notepad is a web-based notepad application. You can create a note by typing the 
 - user model that stores username, salt+hashed password, and name.
 
 
-Client link: notedapp.surge.sh
 
-Api link: https://lab4cs52.herokuapp.com
+**Client link**: notedapp.surge.sh
+
+**Api link**: https://lab4cs52.herokuapp.com
 
 
 
